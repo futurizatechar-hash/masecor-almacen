@@ -1,0 +1,196 @@
+/* ============================================================
+   MASECOR ALMACÉN — Design Tokens
+   Tema: Light Industrial (fondos claros, textos oscuros)
+   Consistente con masecor-web (Premium monochrome)
+   ============================================================ */
+
+:root {
+  /* ── Tipografía ── */
+  --font-heading: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.875rem;
+  --text-lg: 1rem;
+  --text-xl: 1.125rem;
+  --text-2xl: 1.375rem;
+  --text-3xl: 1.75rem;
+  --text-4xl: 2.25rem;
+
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  /* ── Escala Negros / Grises (idéntica a masecor-web) ── */
+  --color-black: #000000;
+  --color-gray-950: #141414;
+  --color-gray-900: #1a1a1a;
+  --color-gray-800: #262626;
+  --color-gray-700: #333333;
+  --color-gray-600: #4a4a4a;
+  --color-gray-500: #666666;
+  --color-gray-400: #888888;
+  --color-gray-300: #aaaaaa;
+  --color-gray-200: #cccccc;
+  --color-gray-100: #e5e5e5;
+  --color-gray-50: #f2f2f2;
+  --color-white-soft: #fafafa;
+  --color-white: #ffffff;
+
+  /* ── Acento Industrial (Naranja / Ámbar) ── */
+  --color-orange-50: #fff7ed;
+  --color-orange-100: #ffedd5;
+  --color-orange-200: #fed7aa;
+  --color-orange-300: #fdba74;
+  --color-orange-400: #fb923c;
+  --color-orange-500: #f97316;
+  --color-orange-600: #ea580c;
+  --color-orange-700: #c2410c;
+
+  /* ── Amarillo (Warning) ── */
+  --color-yellow-50: #fefce8;
+  --color-yellow-100: #fef9c3;
+  --color-yellow-400: #facc15;
+  --color-yellow-500: #eab308;
+  --color-yellow-600: #ca8a04;
+  --color-yellow-700: #a16207;
+
+  /* ── Éxito (Verde) ── */
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+
+  /* ── Error (Rojo) ── */
+  --color-red-50: #fef2f2;
+  --color-red-100: #fee2e2;
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-700: #b91c1c;
+
+  /* ── Azul Info ── */
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+
+  /* ═══════════════════════════════════════
+     SEMÁNTICOS — Tema LIGHT Industrial
+     ═══════════════════════════════════════ */
+
+  /* Backgrounds */
+  --bg-app: var(--color-gray-50);
+  --bg-sidebar: var(--color-white);
+  --bg-card: var(--color-white);
+  --bg-card-hover: var(--color-gray-50);
+  --bg-input: var(--color-white);
+  --bg-input-focus: var(--color-white);
+  --bg-modal: var(--color-white);
+  --bg-modal-overlay: rgba(0, 0, 0, 0.45);
+  --bg-table-row: var(--color-white);
+  --bg-table-row-hover: var(--color-gray-50);
+  --bg-table-header: var(--color-gray-50);
+  --bg-badge: var(--color-gray-100);
+  --bg-inset: var(--color-gray-50);
+
+  /* Text */
+  --text-primary: var(--color-gray-900);
+  --text-secondary: var(--color-gray-600);
+  --text-tertiary: var(--color-gray-400);
+  --text-inverse: var(--color-white);
+  --text-accent: var(--color-orange-600);
+  --text-brand: var(--color-orange-500);
+  --text-link: var(--color-orange-600);
+  --text-link-hover: var(--color-orange-500);
+
+  /* Borders */
+  --border-primary: var(--color-gray-200);
+  --border-secondary: var(--color-gray-300);
+  --border-subtle: var(--color-gray-100);
+  --border-focus: var(--color-orange-500);
+  --border-input: var(--color-gray-300);
+
+  /* Status Colors (sobre fondo claro) */
+  --status-ok: var(--color-green-600);
+  --status-ok-bg: var(--color-green-50);
+  --status-ok-text: var(--color-green-700);
+  --status-warning: var(--color-yellow-500);
+  --status-warning-bg: var(--color-yellow-50);
+  --status-warning-text: var(--color-yellow-700);
+  --status-critical: var(--color-red-500);
+  --status-critical-bg: var(--color-red-50);
+  --status-critical-text: var(--color-red-700);
+  --status-info: var(--color-blue-500);
+  --status-info-bg: var(--color-blue-50);
+  --status-info-text: var(--color-blue-700);
+
+  /* Channel Colors */
+  --channel-inoxar: var(--color-blue-600);
+  --channel-meli: var(--color-yellow-600);
+  --channel-mayorista: var(--color-orange-600);
+  --channel-pos: var(--color-green-600);
+  --channel-fabrica: var(--color-gray-500);
+
+  /* Shadows (para fondo claro) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --shadow-glow-orange: 0 0 20px rgba(249, 115, 22, 0.1);
+
+  /* ── Acero Inoxidable (Metallic Accents) ── */
+  --steel-gradient: linear-gradient(135deg, #c0c0c0, #e8e8e8, #a8a8a8, #d0d0d0, #909090);
+  --steel-gradient-soft: linear-gradient(135deg, #d4d4d4, #ececec, #b8b8b8, #e0e0e0);
+  --steel-gradient-dark: linear-gradient(135deg, #505050, #808080, #606060, #909090, #4a4a4a);
+  --steel-shine: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  --steel-border: linear-gradient(135deg, #a0a0a0, #d0d0d0, #888888);
+  --shadow-steel: 0 2px 8px rgba(80, 80, 80, 0.2);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+  --radius-full: 9999px;
+
+  /* Layout */
+  --sidebar-width: 260px;
+  --sidebar-collapsed: 72px;
+  --header-height: 64px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+
+  /* Z-index */
+  --z-sidebar: 100;
+  --z-header: 110;
+  --z-modal-overlay: 200;
+  --z-modal: 210;
+  --z-toast: 300;
+}

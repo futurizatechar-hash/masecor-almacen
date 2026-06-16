@@ -1,0 +1,57 @@
+/* ============================================================
+   RawMaterials Styles — Light Theme
+   ============================================================ */
+
+.raw-materials {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.raw-materials__summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.rm-name {
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+}
+
+.rm-supplier {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* ── Stock Bar ── */
+.stock-bar {
+  width: 100%;
+  max-width: 120px;
+  height: 6px;
+  background: var(--color-gray-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.stock-bar__fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+}
+
+.stock-bar__fill--ok {
+  background: linear-gradient(90deg, var(--color-green-600), var(--color-green-400));
+}
+
+.stock-bar__fill--low {
+  background: linear-gradient(90deg, var(--color-red-500), var(--color-yellow-400));
+  animation: pulse 2s infinite;
+}
+
+@media (max-width: 768px) {
+  .raw-materials__summary {
+    grid-template-columns: 1fr;
+  }
+}

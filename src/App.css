@@ -1,0 +1,53 @@
+/* ============================================================
+   App Layout Styles — Masecor Almacén
+   ============================================================ */
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-area {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  transition: margin-left var(--transition-slow);
+}
+
+.app--sidebar-collapsed .main-area {
+  margin-left: var(--sidebar-collapsed);
+}
+
+/* The header is already fixed, so offset content */
+.main-content {
+  padding: calc(var(--header-height) + var(--space-6)) var(--space-6) var(--space-6);
+  max-width: 1600px;
+}
+
+/* ── Mobile Overlay ── */
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--bg-modal-overlay);
+  z-index: 90; /* below sidebar which is 100 */
+  animation: fadeIn var(--transition-fast) ease;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .main-area {
+    margin-left: 0;
+  }
+
+  .app--sidebar-collapsed .main-area {
+    margin-left: 0;
+  }
+  
+  .main-content {
+    padding: calc(var(--header-height) + var(--space-4)) var(--space-4) var(--space-4);
+  }
+
+  .app--mobile-menu-open .mobile-overlay {
+    display: block;
+  }
+}

@@ -1,0 +1,160 @@
+/* ============================================================
+   StockMovements Styles — Light Theme
+   ============================================================ */
+
+.movements {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.movements__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.movements__filters {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  color: var(--text-tertiary);
+}
+
+.movements__count {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+}
+
+/* ── Movement Cards ── */
+.movements__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.movement-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  border-left: 3px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.movement-card:hover {
+  border-color: var(--border-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.movement--sale {
+  border-left-color: var(--color-blue-500);
+}
+
+.movement--production {
+  border-left-color: var(--color-green-500);
+}
+
+.movement--adjustment {
+  border-left-color: var(--color-gray-400);
+}
+
+.movement--return {
+  border-left-color: var(--color-orange-500);
+}
+
+.movement--transfer {
+  border-left-color: var(--color-yellow-500);
+}
+
+.movement-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movement-card__type {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-secondary);
+}
+
+.movement-card__qty-value {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-extrabold);
+}
+
+.qty--positive {
+  color: var(--color-green-600);
+}
+
+.qty--negative {
+  color: var(--color-red-600);
+}
+
+.movement-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.movement-card__product {
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+  font-size: var(--text-base);
+}
+
+.movement-card__ref {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+
+.movement-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.movement-card__stock {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.movement-card__stock strong {
+  color: var(--text-primary);
+}
+
+.movement-card__date {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+
+.movement-card__notes {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-gray-50);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid var(--border-primary);
+  line-height: var(--leading-relaxed);
+}
+
+.movement-card__author {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  align-self: flex-end;
+}
